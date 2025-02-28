@@ -5,3 +5,10 @@
 **Bold Text** <inject key="azureaduseremail" enableCopy="true" enableClickToPaste="false" />
 
 <grouped-questions source="group-question-01" />
+
+```language
+    {
+        int var;
+        var = 10;
+    }
+```
