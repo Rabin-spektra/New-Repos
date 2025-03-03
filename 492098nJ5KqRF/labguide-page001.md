@@ -12,3 +12,5 @@ kk
         var = 10;
     }
 ```
+
+<inject key="azureaduseremail" enableCopy="true" enableClickToPaste="false" /> **Email:** <inject key="azureaduseremail" enableCopy="true" enableClickToPaste="false" />
