@@ -1,0 +1,36 @@
+GUIDE TO CONNECT STORED PROCEDURE, CREATE SERVICES, INTERFACE
+----------------------------------------------------------------
+
+1) API.DataEntities -> write the sp name Example: public const string CHECK_ACTIVE_LABGUIDE_LOCK = "SP_CheckActiveLabGuideLock";
+2) In a suitable service, Execute the stored procedure Example: _checkActiveLabGuideLockRepository.ExecuteStoredProcedure(StoredProcedures.UPSERT_ACTIVE_LABGUIDE_LOCK, parameters);
+
+If you want to create Services
+1) In  API.LabGuide.DataEntities.Contracts, Create an Interface Like IExample
+2) Create the service file inside: API.LabGuide.DataServices.Services and implement the Interface you created
+3) Activate the service -> Inside AppServices.cs -> services.AddScoped<ILabGuideLockService, LabGuideLockServices>();
+4)
+Important: 
+To be able to execute stored procedures inside this service, follow this example:
+private readonly IRepositoryAsync<CheckActiveLabGuideLockModel> _checkActiveLabGuideLockRepository;
+
+public LabGuideLockServices(
+    IRepositoryAsync<CheckActiveLabGuideLockModel> checkActiveLabGuideLockRepository)
+{
+    _checkActiveLabGuideLockRepository = checkActiveLabGuideLockRepository;
+}
+
+......
+_checkActiveLabGuideLockRepository.ExecuteStoredProcedure(StoredProcedures.UPSERT_ACTIVE_LABGUIDE_LOCK, parameters);
+
+5) 
+services.AddScoped<IRepositoryAsync<CheckActiveLabGuideLockModel>, Repository<CheckActiveLabGuideLockModel>>();
+services.AddScoped<IRepositoryAsync<LockLabGuideRequestModel>, Repository<LockLabGuideRequestModel>>();
+
+6) if the stored procedure requires parameters, inside API.LabGuide.DataEntities.Models => Create/choose a suitable folder
+Follow this example
+
+public class CheckActiveLabGuideLockParams : StoredProcedureParams
+{
+    public string Masterdocurl { get; set; }
+    public int? TimeoutSeconds { get; set; }
+}
