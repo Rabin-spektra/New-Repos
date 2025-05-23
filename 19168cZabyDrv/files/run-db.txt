@@ -1,1 +1,0 @@
-RunSqlScriptsOnDb.exe "Data Source=localhost;Initial Catalog=CloudEasy;User ID=sa;Password=Sa1" "C:\Work\CloudSandbox\CloudSandbox\Database\AfterRefactor" "C:\Work\CloudSandbox\CloudSandbox\Database\StoredProcedures"
