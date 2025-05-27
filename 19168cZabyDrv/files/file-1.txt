@@ -1,2 +1,16 @@
-This is file content override test.
-This is really good
+UPN,Password,UPN Id, Domain
+"odl_user_119032","qvof20NHD*ZP","AIDAX52OKU2UKOC6HEHHJ","545088251560"
+Resource Group,Parameter Name, Parameter Value
+"545088251560","CloudLabsDeploymentID","119032"
+"545088251560","VpcId","vpc-07518be0865c03dab"
+"545088251560","vmSubnetId","subnet-0aa8c8846aa1242dd"
+"545088251560","vmSecurityGroupId","sg-02ffe497a97cc962e"
+"545088251560","clusterSubnetId","subnet-0ede9ae9156834932"
+"545088251560","clusterSecurityGroupId","sg-07f774d7f9e3d3acc"
+"545088251560","TaskExecutionRole","arn:aws:iam::545088251560:role/stack-119032-TaskExecutionRole-pffvwr1xaF2F"
+"545088251560","VMPublicDNSName","ec2-18-210-17-95.compute-1.amazonaws.com"
+"545088251560","VMPrivateDNSName","ip-10-10-0-242.ec2.internal"
+"545088251560","VMUserName","spadmin"
+"545088251560","VMPassword","Chkp!234"
+"545088251560","VMPublicIP","18.210.17.95"
+"545088251560","VMPrivateIP","10.10.0.242"
