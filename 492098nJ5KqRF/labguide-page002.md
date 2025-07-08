@@ -18,3 +18,15 @@ llllklkj
 
 ljklkjlklaksdjf
 this is good
+
+this is okay
+
+| ID | Name       | Age | Department   | Country     |
+|----|------------|-----|--------------|-------------|
+| 1  | Alice      | 29  | Engineering  | USA         |
+| 2  | Bob        | 34  | Marketing    | Canada      |
+| 3  | Charlie    | 28  | HR           | UK          |
+| 4  | Diana      | 31  | Finance      | Australia   |
+| 5  | Ethan      | 26  | IT           | Germany     |
+
+
